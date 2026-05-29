@@ -1,0 +1,68 @@
+https://leetcode.com/problems/minimum-jumps-to-reach-end-via-prime-teleportation/description/
+
+
+SOLUTION CODE -> 
+
+class Solution {
+public:
+    vector<int> prime_factor(int num) {
+        vector<int> ans;
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                ans.push_back(i);
+            }
+            while (num % i == 0) {
+                num /= i;
+            }
+        }
+        if (num > 1) {
+            ans.push_back(num);
+        }
+        return ans;
+    }
+
+    int minJumps(vector<int>& nums) {
+        int n = nums.size();
+        unordered_map<int, vector<int>> mpp;
+
+        for (int i = 0; i < n; i++) {
+            mpp[nums[i]].push_back(i);
+        }
+
+        queue<int> q;
+        vector<int> vis(n, -1);
+
+        q.push(n - 1);
+        vis[n - 1] = 0;
+
+        while (!q.empty()) {
+            int idx = q.front();
+            q.pop();
+
+            if (idx == 0) {
+                return vis[0];
+            }
+
+            if (idx - 1 >= 0 && vis[idx - 1] == -1) {
+                vis[idx - 1] = vis[idx] + 1;
+                q.push(idx - 1);
+            }
+            if (idx + 1 < n && vis[idx + 1] == -1) {
+                vis[idx + 1] = vis[idx] + 1;
+                q.push(idx + 1);
+            }
+
+            vector<int> ans = prime_factor(nums[idx]);
+
+            for (auto it : ans) {
+                for (auto jt : mpp[it]) {
+                    if (vis[jt] == -1 && jt != idx) {
+                        q.push(jt);
+                        vis[jt] = vis[idx] + 1;
+                    }
+                }
+            }
+        }
+        return -1;
+    }
+};
