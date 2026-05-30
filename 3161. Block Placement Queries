@@ -1,0 +1,139 @@
+https://leetcode.com/problems/block-placement-queries/description/?envType=daily-question&envId=2026-05-30
+
+
+
+class Tree {
+public:
+    vector<int> segtree;
+
+    Tree(int n) { segtree.resize(4 * n); }
+
+    int query(int left, int right, int node, int ql, int qr) {
+        if (qr < left || ql > right) {
+            return INT_MIN;
+        } else if (right <= qr && left >= ql) {
+            return segtree[node];
+        }
+        int mid = left + (right - left) / 2;
+
+        int left_ans = query(left, mid, node * 2 + 1, ql, qr);
+        int right_ans = query(mid + 1, right, node * 2 + 2, ql, qr);
+
+        if (qr <= mid) {
+            return left_ans;
+        } else if (ql > mid) {
+            return right_ans;
+        } else {
+            return max(left_ans, right_ans);
+        }
+    }
+
+    void update(int left, int right, int node, int idx, int val) {
+        if (left == right) {
+            segtree[node] = val;
+            return;
+        }
+
+        int mid = left + (right - left) / 2;
+        if (idx <= mid)
+            update(left, mid, node * 2 + 1, idx, val);
+        else
+            update(mid + 1, right, node * 2 + 2, idx, val);
+
+        segtree[node] = max(segtree[node * 2 + 1], segtree[node * 2 + 2]);
+    }
+};
+
+// class Solution {
+// public:
+//     vector<bool> getResults(vector<vector<int>>& queries) {
+
+//         int n = 50000;
+//         Tree segtree(n + 1);
+
+//         vector<bool> ans;
+
+//         set<int> stt;
+//         stt.insert(0);
+//         stt.insert(n);
+
+//         segtree.update(0, n, 0, n, n);
+
+//         for (int i = 0; i < queries.size(); i++) {
+//             if (queries[i][0] == 2) {
+//                 int a = segtree.query(0, n, 0, 0, queries[i][1]);
+//                 ans.push_back((a >= queries[i][2]));
+//             } else {
+//                 int b = queries[i][1];
+//                 auto lb = lower_bound(stt.begin(), stt.end(), b);
+//                 int curr = 50000;
+//                 int prevv = 0;
+//                 if (lb != stt.begin()) {
+//                     prevv = *(prev(lb));
+//                 }
+//                 if (lb != stt.end()) {
+//                     curr = *lb;
+//                 }
+//                 segtree.update(0, n, 0, curr, curr - b);
+//                 segtree.update(0, n, 0, b, b - prevv);
+//                 stt.insert(b);
+//             }
+//         }
+//         return ans;
+//     }
+// };
+
+class Solution {
+public:
+    vector<bool> getResults(vector<vector<int>>& queries) {
+
+        
+        int n = 50000;
+        Tree segtree(n + 1);
+
+        vector<bool> ans;
+
+        set<int> stt;
+        stt.insert(0);
+        stt.insert(n); 
+
+        segtree.update(0, n, 0, n, n);
+
+        for (int i = 0; i < queries.size(); i++) {
+            if (queries[i][0] == 2) {
+                int x = queries[i][1];
+                int sz = queries[i][2];
+
+                // Step A: Get max fully enclosed gap from the segment tree
+                int max_closed_gap = segtree.query(0, n, 0, 0, x);
+
+                // Step B: Calculate the trailing gap up to 'x'
+                auto it = stt.upper_bound(x); // First obstacle AFTER x
+                it--; // Go back one to get the last obstacle <= x
+                int last_obstacle = *it;
+                int trailing_gap = x - last_obstacle;
+
+                // Step C: The real max gap is the larger of the two
+                int real_max_gap = max(max_closed_gap, trailing_gap);
+
+                ans.push_back(real_max_gap >= sz);
+
+            } else {
+                int b = queries[i][1];
+
+                auto lb = stt.lower_bound(b);
+                // Because 0 and 50005 are in the set, these are 100% safe to
+                // dereference. We no longer need the hardcoded '50000'
+                // fallback!
+                int curr = *lb;
+                int prevv = *prev(lb);
+
+                segtree.update(0, n, 0, curr, curr - b);
+                segtree.update(0, n, 0, b, b - prevv);
+
+                stt.insert(b);
+            }
+        }
+        return ans;
+    }
+};
