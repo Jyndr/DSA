@@ -1,0 +1,55 @@
+https://leetcode.com/problems/total-waviness-of-numbers-in-range-ii/description/
+
+#define ll long long
+class Solution {
+public:
+    ll dp[16][2][10][2][2][16][2];
+    ll f(int index, bool tight, int prev, bool can_peak, bool can_valley,
+         ll cnt, string& s, bool lz) {
+        if (index == s.size()) {
+            return cnt;
+        }
+
+        if (dp[index][tight][prev][can_peak][can_valley][cnt][lz] != -1) {
+            return dp[index][tight][prev][can_peak][can_valley][cnt][lz];
+        }
+
+        int lb = 0, ub = tight ? s[index] - '0' : 9;
+        ll ans = 0;
+
+        for (int dig = lb; dig <= ub; dig++) {
+            if (can_peak && dig < prev) {
+                ans += f(index + 1, (tight && dig == ub), dig, false, true,
+                         cnt + 1, s, (lz && dig == 0));
+            } else if (can_valley && dig > prev) {
+                ans += f(index + 1, (tight && dig == ub), dig, true, false,
+                         cnt + 1, s, (lz && dig == 0));
+            } else {
+                ans +=
+                    f(index + 1, (tight && dig == ub), dig, (dig > prev && !lz),
+                      (dig < prev && !lz), cnt, s, (lz && dig == 0));
+            }
+        }
+        return dp[index][tight][prev][can_peak][can_valley][cnt][lz] = ans;
+    }
+
+    ll for_num(string& s) {
+        ll ans = 0;
+        int ub = s[0] - '0';
+
+        memset(dp, -1, sizeof(dp));
+
+        for (int dig = 0; dig <= ub; dig++) {
+            ans += f(1, dig == ub, dig, false, false, 0, s, (dig == 0));
+        }
+        return ans;
+    }
+
+    ll totalWaviness(ll num1, ll num2) {
+
+        string one = to_string(num2);
+        string two = to_string(num1 - 1);
+
+        return for_num(one) - for_num(two);
+    }
+};
