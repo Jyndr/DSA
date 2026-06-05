@@ -1,0 +1,49 @@
+https://leetcode.com/problems/minimum-operations-to-achieve-at-least-k-peaks/description/
+
+#define ll long long
+class Solution {
+public:
+    ll f(int index, int k, vector<int>& nums, int last, int n,
+         vector<vector<int>>& dp) {
+        if (index >= last) {
+            if (k > 0) {
+                return INT_MAX;
+            } else
+                return 0;
+        }
+
+        if (dp[index][k] != -1) {
+            return dp[index][k];
+        }
+
+        int prev = nums[(index - 1 + n) % n];
+        int next = nums[(index + 1) % n];
+
+        ll maxi = max(prev * 1LL, next * 1LL) - nums[index] + 1;
+        ll op = max(0LL, maxi * 1LL);
+
+        // if doing op
+        ll ans = INT_MAX;
+        if (k - 1 >= 0) {
+            ans = min(ans, op + f(index + 2, k - 1, nums, last, n, dp));
+        }
+        // if not doing
+        ans = min(ans, f(index + 1, k, nums, last, n, dp));
+
+        return dp[index][k] = ans;
+    }
+    int minOperations(vector<int>& nums, int k) {
+        int n = nums.size();
+        vector<vector<int>> dp(n + 1, vector<int>(k + 1, -1));
+        ll a = f(0, k, nums, n - 1, n, dp);
+        vector<vector<int>> dp2(n + 1, vector<int>(k + 1, -1));
+        ll b = f(1, k, nums, n, n, dp2);
+
+        ll ans = min(a, b);
+        if (ans >= INT_MAX) {
+            return -1;
+        }
+
+        return (int)ans;
+    }
+};
