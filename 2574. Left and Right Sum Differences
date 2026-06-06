@@ -1,0 +1,25 @@
+https://leetcode.com/problems/left-and-right-sum-differences/?envType=daily-question&envId=2026-06-06
+
+
+class Solution {
+public:
+    vector<int> leftRightDifference(vector<int>& nums) {
+        vector<int> pre(nums.size()), suff(nums.size());
+        int k = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            k += nums[i];
+            pre[i] = k;
+        }
+        k = 0;
+        for (int i = nums.size() - 1; i >= 0; i--) {
+            k += nums[i];
+            suff[i] = k;
+        }
+
+        vector<int> a;
+        for (int i = 0; i < nums.size(); i++) {
+            a.push_back(abs(suff[i] - pre[i]));
+        }
+        return a;
+    }
+};
