@@ -1,0 +1,28 @@
+https://takeuforward.org/plus/dsa/problems/longest-consecutive-sequence-in-an-array?subject=dsa&approach=optimal
+
+class Solution {
+   public:
+    int longestConsecutive(vector<int>& nums) {
+        unordered_set<int> stt;
+
+        for (int i = 0; i < nums.size(); i++) {
+            stt.insert(nums[i]);
+        }
+
+        int cnt = 1;
+        int maxi = INT_MIN;
+        for (auto it : stt) {
+            if (stt.find(it - 1) == stt.end()) {
+                int num = it;
+                while (stt.find(num + 1) != stt.end()) {
+                    num++;
+                    cnt++;
+                }
+                maxi = max(cnt, maxi);
+                cnt = 1;
+            }
+        }
+
+        return maxi;
+    }
+};
