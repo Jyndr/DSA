@@ -1,0 +1,85 @@
+https://leetcode.com/problems/create-binary-tree-from-descriptions/description/?envType=daily-question&envId=2026-06-07
+
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+public:
+    void dfs(TreeNode* root, int root_val, vector<vector<int>>& tree,
+             unordered_map<int, int>& mpp) {
+        int root_idx = mpp[root_val];
+
+        // if having left child
+        if (tree[root_idx][0] != -1) {
+            TreeNode* leftt = new TreeNode(tree[root_idx][0]);
+            root->left = leftt;
+            dfs(leftt, leftt->val, tree, mpp);
+        }
+
+        // if having right child
+        if (tree[root_idx][1] != -1) {
+            TreeNode* rightt = new TreeNode(tree[root_idx][1]);
+            root->right = rightt;
+            dfs(rightt, rightt->val, tree, mpp);
+        }
+        return;
+    }
+
+    TreeNode* createBinaryTree(vector<vector<int>>& d) {
+
+        // coordinate compression
+        unordered_map<int, int> mpp;
+        int cnt = 0;
+        for (int i = 0; i < d.size(); i++) {
+            int node = d[i][0];
+            if (mpp.find(node) == mpp.end()) {
+                mpp[node] = cnt;
+                cnt++;
+            }
+            if (mpp.find(d[i][1]) == mpp.end()) {
+                mpp[d[i][1]] = cnt;
+                cnt++;
+            }
+        }
+
+        // adj matrix
+        vector<vector<int>> tree(cnt + 1, vector<int>(2, -1));
+        unordered_set<int> not_root;
+
+        for (int i = 0; i < d.size(); i++) {
+            int node = d[i][0];
+            int idx = mpp[node];
+            if (d[i][2] == 1) {
+                tree[idx][0] = d[i][1];
+            } else {
+                tree[idx][1] = d[i][1];
+            }
+            not_root.insert(d[i][1]);
+        }
+
+        // finding root
+        int root = -1;
+        for (int i = 0; i < d.size(); i++) {
+            if (not_root.find(d[i][0]) == not_root.end()) {
+                root = d[i][0];
+                break;
+            }
+        }
+
+        // traversal
+        TreeNode* root_node = new TreeNode(root);
+        dfs(root_node, root, tree, mpp);
+
+        return root_node;
+    }
+};
