@@ -1,0 +1,50 @@
+https://takeuforward.org/plus/dsa/problems/4-sum?subject=dsa&approach=optimal
+
+class Solution {
+   public:
+    int move_forward(int i, vector<int>& nums) {
+        int pt = i;
+        while (pt < nums.size() && nums[i] == nums[pt]) {
+            pt++;
+        }
+        return pt;
+    }
+
+    int move_backward(int i, vector<int>& nums) {
+        int pt = i;
+        while (pt >= 0 && nums[pt] == nums[i]) {
+            pt--;
+        }
+        return pt;
+    }
+
+    vector<vector<int>> fourSum(vector<int>& nums, int target) {
+        sort(nums.begin(), nums.end());
+        vector<vector<int>> vec;
+
+        int i = 0;
+        while (i < nums.size()) {
+            int j = i + 1;
+            while (j < nums.size()) {
+                int k = j + 1;
+                int l = nums.size() - 1;
+                while (k < l) {
+                    long long sum = nums[i] + nums[j] + nums[k] + nums[l];
+                    if (sum == target) {
+                        vec.push_back({nums[i], nums[j], nums[k], nums[l]});
+                        k = move_forward(k, nums);
+                        l = move_backward(l, nums);
+                    } else if (sum < target) {
+                        k = move_forward(k, nums);
+                    } else {
+                        l = move_backward(l, nums);
+                    }
+                }
+                j = move_forward(j, nums);
+            }
+            i = move_forward(i, nums);
+        }
+
+        return vec;
+    }
+};
