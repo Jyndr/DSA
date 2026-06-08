@@ -1,0 +1,22 @@
+https://takeuforward.org/plus/dsa/problems/longest-subarray-with-sum-k?subject=dsa&approach=optimal-only-positives
+
+class Solution {
+   public:
+    int longestSubarray(vector<int> &nums, int k) {
+        unordered_map<int, int> mpp;
+        int pref_sum = 0;
+        int ans = 0;
+        mpp[0] = -1;
+
+        for (int i = 0; i < nums.size(); i++) {
+            pref_sum += nums[i];
+            if (mpp.find(pref_sum - k) != mpp.end()) {
+                ans = max(ans, i - mpp[pref_sum - k]);
+            }
+            if (mpp.find(pref_sum) == mpp.end()) {
+                mpp[pref_sum] = i;
+            }
+        }
+        return ans;
+    }
+};
