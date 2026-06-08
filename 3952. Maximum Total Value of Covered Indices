@@ -1,0 +1,35 @@
+https://leetcode.com/problems/maximum-total-value-of-covered-indices/description/
+
+
+class Solution {
+public:
+    long long dp[100001][2];
+    long long f(int index, bool prev_used, string& s, vector<int>& nums) {
+        if (index == s.size()) {
+            return 0;
+        }
+
+        if (dp[index][prev_used] != -1) {
+            return dp[index][prev_used];
+        }
+
+        long long ans = INT_MIN;
+        if (s[index] == '1') {
+            // using prev
+            if (!prev_used && index > 0) {
+                ans = max(ans, nums[index - 1] + f(index + 1, false, s, nums));
+            }
+
+            // using curr
+            ans = max(ans, nums[index] + f(index + 1, true, s, nums));
+        } else {
+            ans = max(ans, f(index + 1, false, s, nums));
+        }
+
+        return dp[index][prev_used] = ans;
+    }
+    long long maxTotal(vector<int>& nums, string s) {
+        memset(dp, -1, sizeof(dp));
+        return f(0, false, s, nums);
+    }
+};
