@@ -1,0 +1,21 @@
+https://takeuforward.org/plus/dsa/problems/count-subarrays-with-given-xor-k?subject=dsa&approach=optimal-only-positives
+
+class Solution {
+   public:
+    int subarraysWithXorK(vector<int> &nums, int k) {
+        unordered_map<int, int> mpp;
+        mpp[0] = 1;
+        int pref_xorr = 0;
+        int ans = 0;
+
+        for (int i = 0; i < nums.size(); i++) {
+            pref_xorr ^= nums[i];
+
+            if (mpp.find(pref_xorr ^ k) != mpp.end()) {
+                ans += mpp[pref_xorr ^ k];
+            }
+            mpp[pref_xorr]++;
+        }
+        return ans;
+    }
+};
