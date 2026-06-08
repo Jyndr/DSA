@@ -1,0 +1,25 @@
+https://takeuforward.org/plus/dsa/problems/longest-substring-without-repeating-characters?subject=dsa&approach=optimal-only-positives
+
+class Solution {
+   public:
+    int longestNonRepeatingSubstring(string& s) {
+        // your code goes here
+        int i = 0, j = 0;
+        unordered_map<int, int> mpp;
+        int ans = 0;
+
+        while (j < s.size()) {
+            mpp[s[j]]++;
+
+            if (mpp[s[j]] > 1) {
+                while (mpp[s[j]] > 1) {
+                    mpp[s[i]]--;
+                    i++;
+                }
+            }
+            ans = max(ans, j - i + 1);
+            j++;
+        }
+        return ans;
+    }
+};
