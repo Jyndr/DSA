@@ -1,0 +1,51 @@
+https://takeuforward.org/plus/dsa/problems/merge-sorted-lists-?subject=dsa&approach=optimal-only-positives
+
+// Definition of singly linked list:
+// struct ListNode
+// {
+//     int val;
+//     ListNode *next;
+//     ListNode(int data1)
+//     {
+//         val = data1;
+//         next = NULL;
+//     }
+//     ListNode(int data1, ListNode *next1)
+//     {
+//         val = data1;
+//         next = next1;
+//     }
+// };
+
+class Solution {
+   public:
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        ListNode* temp = new ListNode(-1);
+        ListNode* head = temp;
+
+        while (list1 && list2) {
+            if (list1->val <= list2->val) {
+                temp->next = list1;
+                list1 = list1->next;
+            } else {
+                temp->next = list2;
+                list2 = list2->next;
+            }
+            temp = temp->next;
+        }
+
+        while (list1) {
+            temp->next = list1;
+            list1 = list1->next;
+            temp = temp->next;
+        }
+
+        while (list2) {
+            temp->next = list2;
+            list2 = list2->next;
+            temp = temp->next;
+        }
+
+        return head->next;
+    }
+};
