@@ -1,0 +1,45 @@
+https://takeuforward.org/plus/dsa/problems/find-middle-of-linked-list?subject=dsa&approach=optimal-only-positives
+
+
+/*
+Definition of singly linked list:
+struct ListNode
+{
+    int val;
+    ListNode *next;
+    ListNode()
+    {
+        val = 0;
+        next = NULL;
+    }
+    ListNode(int data1)
+    {
+        val = data1;
+        next = NULL;
+    }
+    ListNode(int data1, ListNode *next1)
+    {
+        val = data1;
+        next = next1;
+    }
+};
+*/
+
+class Solution {
+   public:
+    ListNode* middleOfLinkedList(ListNode* head) {
+        ListNode* slow = head;
+        ListNode* fast = head;
+
+        while (fast->next && fast->next->next) {
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+
+        if (fast->next) {
+            return slow->next;
+        }
+        
+        return slow;
+    }
+};
