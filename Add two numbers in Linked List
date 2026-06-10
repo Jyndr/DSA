@@ -1,0 +1,62 @@
+https://takeuforward.org/plus/dsa/problems/add-two-numbers-in-ll?subject=dsa&approach=optimal
+
+/*
+Definition of singly linked list:
+class ListNode{
+  public:
+    int data;
+    ListNode *next;
+    ListNode() : data(0), next(nullptr) {}
+    ListNode(int x) : data(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : data(x), next(next) {}
+};
+*/
+
+class Solution {
+   public:
+    ListNode* addTwoNumbers(ListNode*& linkedList1, ListNode*& linkedList2) {
+        // your code goes here
+        ListNode* temp1 = linkedList1;
+        ListNode* temp2 = linkedList2;
+        int carry = 0;
+
+        ListNode* head = new ListNode(-1);
+        ListNode* prevv = head;
+
+        while (temp1 && temp2) {
+            int num = carry + temp1->data + temp2->data;
+            ListNode* newnode = new ListNode(num % 10);
+            prevv->next = newnode;
+            prevv = newnode;
+            carry = num / 10;
+            temp1 = temp1->next;
+            temp2 = temp2->next;
+        }
+
+        while (temp1) {
+            int num = carry + temp1->data;
+            ListNode* newnode = new ListNode(num % 10);
+            prevv->next = newnode;
+            prevv = newnode;
+            carry = num / 10;
+            temp1 = temp1->next;
+        }
+
+        while (temp2) {
+            int num = carry + temp2->data;
+            ListNode* newnode = new ListNode(num % 10);
+            prevv->next = newnode;
+            prevv = newnode;
+            carry = num / 10;
+            temp2 = temp2->next;
+        }
+
+        if (carry) {
+            ListNode* newnode = new ListNode(carry);
+            prevv->next = newnode;
+            prevv = newnode;
+        }
+
+        return head->next;
+    }
+};
