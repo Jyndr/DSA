@@ -1,0 +1,56 @@
+https://takeuforward.org/plus/dsa/problems/remove-nth-node-from-the-back-of-the-ll?subject=dsa&approach=optimal
+
+/*
+Definition of singly linked list:
+struct ListNode
+{
+    int val;
+    ListNode *next;
+    ListNode()
+    {
+        val = 0;
+        next = NULL;
+    }
+    ListNode(int data1)
+    {
+        val = data1;
+        next = NULL;
+    }
+    ListNode(int data1, ListNode *next1)
+    {
+        val = data1;
+        next = next1;
+    }
+};
+*/
+
+class Solution {
+   public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode* slow = head;
+        ListNode* fast = head;
+
+        while (n > 0) {
+            fast = fast->next;
+            n--;
+        }
+
+        ListNode* prevv = nullptr;
+
+        while (fast) {
+            fast = fast->next;
+            prevv = slow;
+            slow = slow->next;
+        }
+
+        ListNode* new_head = head;
+        if (!prevv) {
+            new_head = slow->next;
+        } else {
+            prevv->next = slow->next;
+        }
+        delete (slow);
+
+        return new_head;
+    }
+};
