@@ -1,0 +1,100 @@
+https://leetcode.com/problems/maximum-total-subarray-value-ii/description/
+
+class segT {
+public:
+    vector<int> segTree1, segTree2;
+
+    segT(int n) {
+        segTree1.resize(4 * n);
+        segTree2.resize(4 * n);
+    }
+
+    void build(int left, int right, int node, vector<int>& nums) {
+        if (left == right) {
+            segTree1[node] = nums[left];
+            segTree2[node] = nums[left];
+            return;
+        }
+
+        int mid = left + (right - left) / 2;
+
+        build(left, mid, node * 2 + 1, nums);
+        build(mid + 1, right, node * 2 + 2, nums);
+
+        segTree1[node] = max(segTree1[node * 2 + 1], segTree1[node * 2 + 2]);
+        segTree2[node] = min(segTree2[node * 2 + 1], segTree2[node * 2 + 2]);
+    }
+
+    int query_min(int left, int right, int lq, int rq, int node) {
+        if (rq < left || lq > right)
+            return INT_MAX;
+
+        if (lq <= left && right <= rq)
+            return segTree2[node];
+
+        int mid = left + (right - left) / 2;
+
+        return min(query_min(left, mid, lq, rq, node * 2 + 1),
+                   query_min(mid + 1, right, lq, rq, node * 2 + 2));
+    }
+
+    int query_max(int left, int right, int lq, int rq, int node) {
+        if (rq < left || lq > right)
+            return INT_MIN;
+
+        if (lq <= left && right <= rq)
+            return segTree1[node];
+
+        int mid = left + (right - left) / 2;
+
+        return max(query_max(left, mid, lq, rq, node * 2 + 1),
+                   query_max(mid + 1, right, lq, rq, node * 2 + 2));
+    }
+
+    long long query(int left, int right, int n) {
+        return (long long)query_max(0, n - 1, left, right, 0) -
+               query_min(0, n - 1, left, right, 0);
+    }
+};
+
+class Solution {
+public:
+    long long maxTotalValue(vector<int>& nums, int k) {
+
+        int n = nums.size();
+        segT segtree(n);
+        segtree.build(0, n - 1, 0, nums);
+
+        set<pair<int, int>> stt;
+        priority_queue<pair<long long, pair<int, int>>> pq;
+        long long ans = 0;
+        stt.insert({0, n - 1});
+        pq.push({segtree.query(0, n - 1, n), {0, n - 1}});
+
+        while (k > 0 && !pq.empty()) {
+            ans += pq.top().first;
+            k--;
+            int idx1 = pq.top().second.first;
+            int idx2 = pq.top().second.second;
+            pq.pop();
+
+            if (idx1 + 1 < n && idx1 + 1 < idx2) {
+                if (stt.find({idx1 + 1, idx2}) == stt.end()) {
+                    stt.insert({idx1 + 1, idx2});
+                    pq.push(
+                        {segtree.query(idx1 + 1, idx2, n), {idx1 + 1, idx2}});
+                }
+            }
+
+            if (idx2 - 1 >= 0 && idx2 - 1 > idx1) {
+                if (stt.find({idx1, idx2 - 1}) == stt.end()) {
+                    stt.insert({idx1, idx2 - 1});
+                    pq.push(
+                        {segtree.query(idx1, idx2 - 1, n), {idx1, idx2 - 1}});
+                }
+            }
+        }
+        return ans;
+    }
+};
+
