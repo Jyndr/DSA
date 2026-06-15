@@ -1,0 +1,43 @@
+class TreeAncestor {
+public:
+    vector<vector<int>> up;
+    TreeAncestor(int n, vector<int>& parent) {
+        up.resize(n);
+        for (int i = 0; i < n; i++) {
+            up[i].resize(log2(n) + 2, -1);
+            up[i][0] = parent[i];
+        }
+        
+        for (int b = 1; b <= log2(n) + 1; b++) {
+            for (int node = 0; node < n; node++) {
+                if (up[node][b - 1] != -1) {
+                    up[node][b] = up[up[node][b - 1]][b - 1];
+                }
+            }
+        }
+    }
+
+    int getKthAncestor(int node, int k) {
+
+        if (log2(k) + 1 >= up[0].size()) {
+            return -1;
+        }
+
+        int curr_node = node;
+        for (int i = 0; i <= log2(k) + 1; i++) {
+            if (k & (1 << i)) {
+                curr_node = up[curr_node][i];
+                if (curr_node == -1) {
+                    return -1;
+                }
+            }
+        }
+        return curr_node;
+    }
+};
+
+/**
+ * Your TreeAncestor object will be instantiated and called as such:
+ * TreeAncestor* obj = new TreeAncestor(n, parent);
+ * int param_1 = obj->getKthAncestor(node,k);
+ */
