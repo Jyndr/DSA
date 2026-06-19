@@ -1,0 +1,128 @@
+class LCA {
+public:
+    vector<vector<int>> up;
+    vector<int> depth;
+    vector<vector<int>> adj;
+    int n = 0, m = 0;
+
+    LCA(int n, int m, vector<vector<int>>& edges) { // constructor
+        this->n = n;
+        this->m = m;
+        up.resize(n + 1, vector<int>(m + 1, -1));
+        depth.resize(n + 1, -1);
+        adj.resize(n + 1); // this will take at max 3 * n space
+
+        for (int i = 0; i < edges.size(); i++) {
+            adj[edges[i][1]].push_back(edges[i][0]);
+            adj[edges[i][0]].push_back(edges[i][1]);
+        }
+
+        depth[1] = 0;
+        up[1][0] = -1;
+        dfs(1);
+        creating_ancestor_table(n, m);
+    }
+
+    void dfs(int parent) { // precomputing depth
+        for (auto it : adj[parent]) {
+            if (depth[it] == -1) {
+                up[it][0] = parent;
+                depth[it] = depth[parent] + 1;
+                dfs(it);
+            }
+        }
+    }
+
+    void creating_ancestor_table(int n, int m) {
+        for (int i = 1; i < m; i++) {
+            for (int node = 1; node <= n; node++) {
+                if (up[node][i - 1] != -1) {
+                    up[node][i] = up[up[node][i - 1]][i - 1];
+                }
+            }
+        }
+    }
+
+    int finding_kth_ancestor(int u, int k) {
+
+        for (int i = 0; i < m; i++) {
+            if (k & (1 << i)) {
+                u = up[u][i];
+            }
+            if (u == -1) {
+                return -1;
+            }
+        }
+        return u;
+    }
+
+    int finding_dis(int u, int v) {
+        int du = depth[u], dv = depth[v];
+
+        if (dv > du) {
+            swap(u, v);
+            swap(du, dv);
+        }
+
+        u = finding_kth_ancestor(u, du - dv);
+
+        // now u and v are at same level
+        for (int i = m - 1; i >= 0; i--) {
+            if (up[u][i] == -1) {
+                continue;
+            }
+
+            if (up[u][i] != up[v][i]) {
+                u = up[u][i];
+                v = up[v][i];
+            }
+        }
+        int lca;
+        if (u == v)
+            lca = u;
+        else
+            lca = up[u][0];
+
+        return du + dv - 2 * depth[lca];
+    }
+};
+
+class Solution {
+public:
+    const int mod = 1e9 + 7;
+
+    int binary_expo(int a, int b) {
+        long long ans = 1;
+        while (b > 0) {
+            if (b % 2 == 0) {
+                a = ((long long)a * a) % mod;
+                b /= 2;
+            } else {
+                ans = (ans * a) % mod;
+                b--;
+            }
+        }
+        return ans;
+    }
+
+    vector<int> assignEdgeWeights(vector<vector<int>>& edges,
+                                  vector<vector<int>>& queries) {
+
+        int nodes = edges.size() + 1;
+
+        LCA tree(nodes, log2(nodes + 1) + 1, edges);
+
+        vector<int> ans;
+        for (int i = 0; i < queries.size(); i++) {
+            int u = queries[i][0];
+            int v = queries[i][1];
+
+            int dis = tree.finding_dis(u, v);
+            if (dis == 0)
+                ans.push_back(0);
+            else
+                ans.push_back(binary_expo(2, dis - 1));
+        }
+        return ans;
+    }
+};
