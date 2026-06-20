@@ -1,0 +1,43 @@
+class Solution {
+public:
+    long long dp[16][2][2][2][2][2];
+    long long f(int index, bool lz1, bool lz2, int carry, string& s, bool num1,
+                bool num2) {
+        if (index == -1) {
+            return carry == 0 && num1 && num2;
+        }
+
+        if (dp[index][lz1][lz2][carry][num1][num2] != -1) {
+            return dp[index][lz1][lz2][carry][num1][num2];
+        }
+
+        long long ans = 0;
+        int lb = 0, ub = 9;
+
+        for (int dig1 = lb; dig1 <= ub; dig1++) {
+            if (lz1 && dig1 != 0) {
+                continue;
+            }
+            for (int dig2 = lb; dig2 <= ub; dig2++) {
+                if (lz2 && dig2 != 0) {
+                    continue;
+                }
+
+                int fc = (dig1 + dig2 + carry) / 10;
+                int ss = (dig1 + dig2 + carry) % 10;
+
+                if (ss == (s[index] - '0')) {
+                    ans += f(index - 1, dig1 == 0, dig2 == 0, fc, s,
+                             (num1 || dig1 != 0), (num2 || dig2 != 0));
+                }
+            }
+        }
+        return dp[index][lz1][lz2][carry][num1][num2] = ans;
+    }
+
+    long long countNoZeroPairs(long long n) {
+        string s = to_string(n);
+        memset(dp, -1, sizeof(dp));
+        return f(s.size() - 1, false, false, 0, s, false, false);
+    }
+};
