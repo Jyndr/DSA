@@ -10,6 +10,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 ## Dynamic Programming
 |  |
 | ------- |
+| [3699-number-of-zigzag-arrays-i](https://github.com/Jyndr/DSA/tree/master/3699-number-of-zigzag-arrays-i) |
 | [3704-count-no-zero-pairs-that-sum-to-n](https://github.com/Jyndr/DSA/tree/master/3704-count-no-zero-pairs-that-sum-to-n) |
 ## Hash Table
 |  |
@@ -23,4 +24,8 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 |  |
 | ------- |
 | [1189-maximum-number-of-balloons](https://github.com/Jyndr/DSA/tree/master/1189-maximum-number-of-balloons) |
+## Prefix Sum
+|  |
+| ------- |
+| [3699-number-of-zigzag-arrays-i](https://github.com/Jyndr/DSA/tree/master/3699-number-of-zigzag-arrays-i) |
 <!---LeetCode Topics End-->
