@@ -6,11 +6,13 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 ## Math
 |  |
 | ------- |
+| [3700-number-of-zigzag-arrays-ii](https://github.com/Jyndr/DSA/tree/master/3700-number-of-zigzag-arrays-ii) |
 | [3704-count-no-zero-pairs-that-sum-to-n](https://github.com/Jyndr/DSA/tree/master/3704-count-no-zero-pairs-that-sum-to-n) |
 ## Dynamic Programming
 |  |
 | ------- |
 | [3699-number-of-zigzag-arrays-i](https://github.com/Jyndr/DSA/tree/master/3699-number-of-zigzag-arrays-i) |
+| [3700-number-of-zigzag-arrays-ii](https://github.com/Jyndr/DSA/tree/master/3700-number-of-zigzag-arrays-ii) |
 | [3704-count-no-zero-pairs-that-sum-to-n](https://github.com/Jyndr/DSA/tree/master/3704-count-no-zero-pairs-that-sum-to-n) |
 ## Hash Table
 |  |
