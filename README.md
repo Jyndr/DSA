@@ -15,6 +15,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 ## Hash Table
 |  |
 | ------- |
+| [0974-subarray-sums-divisible-by-k](https://github.com/Jyndr/DSA/tree/master/0974-subarray-sums-divisible-by-k) |
 | [1189-maximum-number-of-balloons](https://github.com/Jyndr/DSA/tree/master/1189-maximum-number-of-balloons) |
 ## String
 |  |
@@ -27,5 +28,10 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 ## Prefix Sum
 |  |
 | ------- |
+| [0974-subarray-sums-divisible-by-k](https://github.com/Jyndr/DSA/tree/master/0974-subarray-sums-divisible-by-k) |
 | [3699-number-of-zigzag-arrays-i](https://github.com/Jyndr/DSA/tree/master/3699-number-of-zigzag-arrays-i) |
+## Array
+|  |
+| ------- |
+| [0974-subarray-sums-divisible-by-k](https://github.com/Jyndr/DSA/tree/master/0974-subarray-sums-divisible-by-k) |
 <!---LeetCode Topics End-->
