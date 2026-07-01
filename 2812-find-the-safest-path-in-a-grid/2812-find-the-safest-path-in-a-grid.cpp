@@ -60,13 +60,11 @@ public:
             if (newr < n && newc < n && newr >= 0 && newc >= 0 &&
                 vis[newr][newc] == 0 && dis[newr * n + newc] >= v) {
                 ans |= dfs(grid, v, dis, newr, newc, vis);
-                if (ans == true) {
-                    vis[i][j] = 0;
-                    return ans;
-                }
+                // if (ans == true) {
+                //     return ans;
+                // }
             }
         }
-
         return ans;
     }
 
@@ -80,7 +78,7 @@ public:
         while (low <= high) {
             int mid = low + (high - low) / 2;
             vector<vector<int>> vis(n, vector<int>(n, 0));
-            
+
             if (dfs(grid, mid, dis, 0, 0, vis)) {
                 ans = mid;
                 low = mid + 1;
