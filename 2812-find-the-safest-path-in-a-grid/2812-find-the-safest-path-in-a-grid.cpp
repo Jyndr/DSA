@@ -60,9 +60,9 @@ public:
             if (newr < n && newc < n && newr >= 0 && newc >= 0 &&
                 vis[newr][newc] == 0 && dis[newr * n + newc] >= v) {
                 ans |= dfs(grid, v, dis, newr, newc, vis);
-                // if (ans == true) {
-                //     return ans;
-                // }
+                if (ans == true) {
+                    return ans;
+                }
             }
         }
         return ans;
