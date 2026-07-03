@@ -15,6 +15,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [3699-number-of-zigzag-arrays-i](https://github.com/Jyndr/DSA/tree/master/3699-number-of-zigzag-arrays-i) |
 | [3700-number-of-zigzag-arrays-ii](https://github.com/Jyndr/DSA/tree/master/3700-number-of-zigzag-arrays-ii) |
 | [3704-count-no-zero-pairs-that-sum-to-n](https://github.com/Jyndr/DSA/tree/master/3704-count-no-zero-pairs-that-sum-to-n) |
+| [3977-minimum-time-to-reach-target-with-limited-power](https://github.com/Jyndr/DSA/tree/master/3977-minimum-time-to-reach-target-with-limited-power) |
 ## Hash Table
 |  |
 | ------- |
@@ -57,6 +58,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [3620-network-recovery-pathways](https://github.com/Jyndr/DSA/tree/master/3620-network-recovery-pathways) |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/Jyndr/DSA/tree/master/3737-count-subarrays-with-majority-element-i) |
 | [3739-count-subarrays-with-majority-element-ii](https://github.com/Jyndr/DSA/tree/master/3739-count-subarrays-with-majority-element-ii) |
+| [3977-minimum-time-to-reach-target-with-limited-power](https://github.com/Jyndr/DSA/tree/master/3977-minimum-time-to-reach-target-with-limited-power) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -113,6 +115,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [3286-find-a-safe-walk-through-a-grid](https://github.com/Jyndr/DSA/tree/master/3286-find-a-safe-walk-through-a-grid) |
 | [3620-network-recovery-pathways](https://github.com/Jyndr/DSA/tree/master/3620-network-recovery-pathways) |
 | [3970-shortest-path-with-at-most-k-consecutive-identical-characters](https://github.com/Jyndr/DSA/tree/master/3970-shortest-path-with-at-most-k-consecutive-identical-characters) |
+| [3977-minimum-time-to-reach-target-with-limited-power](https://github.com/Jyndr/DSA/tree/master/3977-minimum-time-to-reach-target-with-limited-power) |
 ## Matrix
 |  |
 | ------- |
@@ -124,12 +127,14 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [3286-find-a-safe-walk-through-a-grid](https://github.com/Jyndr/DSA/tree/master/3286-find-a-safe-walk-through-a-grid) |
 | [3620-network-recovery-pathways](https://github.com/Jyndr/DSA/tree/master/3620-network-recovery-pathways) |
 | [3970-shortest-path-with-at-most-k-consecutive-identical-characters](https://github.com/Jyndr/DSA/tree/master/3970-shortest-path-with-at-most-k-consecutive-identical-characters) |
+| [3977-minimum-time-to-reach-target-with-limited-power](https://github.com/Jyndr/DSA/tree/master/3977-minimum-time-to-reach-target-with-limited-power) |
 ## Shortest Path
 |  |
 | ------- |
 | [3286-find-a-safe-walk-through-a-grid](https://github.com/Jyndr/DSA/tree/master/3286-find-a-safe-walk-through-a-grid) |
 | [3620-network-recovery-pathways](https://github.com/Jyndr/DSA/tree/master/3620-network-recovery-pathways) |
 | [3970-shortest-path-with-at-most-k-consecutive-identical-characters](https://github.com/Jyndr/DSA/tree/master/3970-shortest-path-with-at-most-k-consecutive-identical-characters) |
+| [3977-minimum-time-to-reach-target-with-limited-power](https://github.com/Jyndr/DSA/tree/master/3977-minimum-time-to-reach-target-with-limited-power) |
 ## Topological Sort
 |  |
 | ------- |
