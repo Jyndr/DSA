@@ -8,6 +8,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | ------- |
 | [3700-number-of-zigzag-arrays-ii](https://github.com/Jyndr/DSA/tree/master/3700-number-of-zigzag-arrays-ii) |
 | [3704-count-no-zero-pairs-that-sum-to-n](https://github.com/Jyndr/DSA/tree/master/3704-count-no-zero-pairs-that-sum-to-n) |
+| [3754-concatenate-non-zero-digits-and-multiply-by-sum-i](https://github.com/Jyndr/DSA/tree/master/3754-concatenate-non-zero-digits-and-multiply-by-sum-i) |
 ## Dynamic Programming
 |  |
 | ------- |
