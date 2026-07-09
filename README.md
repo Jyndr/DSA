@@ -27,6 +27,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [1189-maximum-number-of-balloons](https://github.com/Jyndr/DSA/tree/master/1189-maximum-number-of-balloons) |
 | [1358-number-of-substrings-containing-all-three-characters](https://github.com/Jyndr/DSA/tree/master/1358-number-of-substrings-containing-all-three-characters) |
 | [3020-find-the-maximum-number-of-elements-in-subset](https://github.com/Jyndr/DSA/tree/master/3020-find-the-maximum-number-of-elements-in-subset) |
+| [3532-path-existence-queries-in-a-graph-i](https://github.com/Jyndr/DSA/tree/master/3532-path-existence-queries-in-a-graph-i) |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/Jyndr/DSA/tree/master/3737-count-subarrays-with-majority-element-i) |
 | [3739-count-subarrays-with-majority-element-ii](https://github.com/Jyndr/DSA/tree/master/3739-count-subarrays-with-majority-element-ii) |
 ## String
@@ -65,6 +66,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [3020-find-the-maximum-number-of-elements-in-subset](https://github.com/Jyndr/DSA/tree/master/3020-find-the-maximum-number-of-elements-in-subset) |
 | [3093-longest-common-suffix-queries](https://github.com/Jyndr/DSA/tree/master/3093-longest-common-suffix-queries) |
 | [3286-find-a-safe-walk-through-a-grid](https://github.com/Jyndr/DSA/tree/master/3286-find-a-safe-walk-through-a-grid) |
+| [3532-path-existence-queries-in-a-graph-i](https://github.com/Jyndr/DSA/tree/master/3532-path-existence-queries-in-a-graph-i) |
 | [3620-network-recovery-pathways](https://github.com/Jyndr/DSA/tree/master/3620-network-recovery-pathways) |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/Jyndr/DSA/tree/master/3737-count-subarrays-with-majority-element-i) |
 | [3739-count-subarrays-with-majority-element-ii](https://github.com/Jyndr/DSA/tree/master/3739-count-subarrays-with-majority-element-ii) |
@@ -110,6 +112,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 |  |
 | ------- |
 | [2812-find-the-safest-path-in-a-grid](https://github.com/Jyndr/DSA/tree/master/2812-find-the-safest-path-in-a-grid) |
+| [3532-path-existence-queries-in-a-graph-i](https://github.com/Jyndr/DSA/tree/master/3532-path-existence-queries-in-a-graph-i) |
 | [3620-network-recovery-pathways](https://github.com/Jyndr/DSA/tree/master/3620-network-recovery-pathways) |
 ## Breadth-First Search
 |  |
@@ -122,6 +125,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | ------- |
 | [2492-minimum-score-of-a-path-between-two-cities](https://github.com/Jyndr/DSA/tree/master/2492-minimum-score-of-a-path-between-two-cities) |
 | [2812-find-the-safest-path-in-a-grid](https://github.com/Jyndr/DSA/tree/master/2812-find-the-safest-path-in-a-grid) |
+| [3532-path-existence-queries-in-a-graph-i](https://github.com/Jyndr/DSA/tree/master/3532-path-existence-queries-in-a-graph-i) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
@@ -141,6 +145,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | ------- |
 | [2492-minimum-score-of-a-path-between-two-cities](https://github.com/Jyndr/DSA/tree/master/2492-minimum-score-of-a-path-between-two-cities) |
 | [3286-find-a-safe-walk-through-a-grid](https://github.com/Jyndr/DSA/tree/master/3286-find-a-safe-walk-through-a-grid) |
+| [3532-path-existence-queries-in-a-graph-i](https://github.com/Jyndr/DSA/tree/master/3532-path-existence-queries-in-a-graph-i) |
 | [3620-network-recovery-pathways](https://github.com/Jyndr/DSA/tree/master/3620-network-recovery-pathways) |
 | [3970-shortest-path-with-at-most-k-consecutive-identical-characters](https://github.com/Jyndr/DSA/tree/master/3970-shortest-path-with-at-most-k-consecutive-identical-characters) |
 | [3977-minimum-time-to-reach-target-with-limited-power](https://github.com/Jyndr/DSA/tree/master/3977-minimum-time-to-reach-target-with-limited-power) |
