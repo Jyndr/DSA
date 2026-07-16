@@ -12,6 +12,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [3704-count-no-zero-pairs-that-sum-to-n](https://github.com/Jyndr/DSA/tree/master/3704-count-no-zero-pairs-that-sum-to-n) |
 | [3754-concatenate-non-zero-digits-and-multiply-by-sum-i](https://github.com/Jyndr/DSA/tree/master/3754-concatenate-non-zero-digits-and-multiply-by-sum-i) |
 | [3756-concatenate-non-zero-digits-and-multiply-by-sum-ii](https://github.com/Jyndr/DSA/tree/master/3756-concatenate-non-zero-digits-and-multiply-by-sum-ii) |
+| [3867-sum-of-gcd-of-formed-pairs](https://github.com/Jyndr/DSA/tree/master/3867-sum-of-gcd-of-formed-pairs) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -80,6 +81,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [3620-network-recovery-pathways](https://github.com/Jyndr/DSA/tree/master/3620-network-recovery-pathways) |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/Jyndr/DSA/tree/master/3737-count-subarrays-with-majority-element-i) |
 | [3739-count-subarrays-with-majority-element-ii](https://github.com/Jyndr/DSA/tree/master/3739-count-subarrays-with-majority-element-ii) |
+| [3867-sum-of-gcd-of-formed-pairs](https://github.com/Jyndr/DSA/tree/master/3867-sum-of-gcd-of-formed-pairs) |
 | [3977-minimum-time-to-reach-target-with-limited-power](https://github.com/Jyndr/DSA/tree/master/3977-minimum-time-to-reach-target-with-limited-power) |
 ## Divide and Conquer
 |  |
@@ -119,6 +121,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [1331-rank-transform-of-an-array](https://github.com/Jyndr/DSA/tree/master/1331-rank-transform-of-an-array) |
 | [1846-maximum-element-after-decreasing-and-rearranging](https://github.com/Jyndr/DSA/tree/master/1846-maximum-element-after-decreasing-and-rearranging) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/Jyndr/DSA/tree/master/3534-path-existence-queries-in-a-graph-ii) |
+| [3867-sum-of-gcd-of-formed-pairs](https://github.com/Jyndr/DSA/tree/master/3867-sum-of-gcd-of-formed-pairs) |
 ## Sliding Window
 |  |
 | ------- |
@@ -193,6 +196,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 |  |
 | ------- |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/Jyndr/DSA/tree/master/3534-path-existence-queries-in-a-graph-ii) |
+| [3867-sum-of-gcd-of-formed-pairs](https://github.com/Jyndr/DSA/tree/master/3867-sum-of-gcd-of-formed-pairs) |
 ## Bit Manipulation
 |  |
 | ------- |
@@ -202,4 +206,9 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | ------- |
 | [3336-find-the-number-of-subsequences-with-equal-gcd](https://github.com/Jyndr/DSA/tree/master/3336-find-the-number-of-subsequences-with-equal-gcd) |
 | [3658-gcd-of-odd-and-even-sums](https://github.com/Jyndr/DSA/tree/master/3658-gcd-of-odd-and-even-sums) |
+| [3867-sum-of-gcd-of-formed-pairs](https://github.com/Jyndr/DSA/tree/master/3867-sum-of-gcd-of-formed-pairs) |
+## Simulation
+|  |
+| ------- |
+| [3867-sum-of-gcd-of-formed-pairs](https://github.com/Jyndr/DSA/tree/master/3867-sum-of-gcd-of-formed-pairs) |
 <!---LeetCode Topics End-->
