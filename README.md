@@ -50,6 +50,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [1358-number-of-substrings-containing-all-three-characters](https://github.com/Jyndr/DSA/tree/master/1358-number-of-substrings-containing-all-three-characters) |
 | [1967-number-of-strings-that-appear-as-substrings-in-word](https://github.com/Jyndr/DSA/tree/master/1967-number-of-strings-that-appear-as-substrings-in-word) |
 | [3093-longest-common-suffix-queries](https://github.com/Jyndr/DSA/tree/master/3093-longest-common-suffix-queries) |
+| [3499-maximize-active-section-with-trade-i](https://github.com/Jyndr/DSA/tree/master/3499-maximize-active-section-with-trade-i) |
 | [3756-concatenate-non-zero-digits-and-multiply-by-sum-ii](https://github.com/Jyndr/DSA/tree/master/3756-concatenate-non-zero-digits-and-multiply-by-sum-ii) |
 | [3922-minimum-flips-to-make-binary-string-coherent](https://github.com/Jyndr/DSA/tree/master/3922-minimum-flips-to-make-binary-string-coherent) |
 | [3970-shortest-path-with-at-most-k-consecutive-identical-characters](https://github.com/Jyndr/DSA/tree/master/3970-shortest-path-with-at-most-k-consecutive-identical-characters) |
@@ -116,6 +117,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | ------- |
 | [1291-sequential-digits](https://github.com/Jyndr/DSA/tree/master/1291-sequential-digits) |
 | [3020-find-the-maximum-number-of-elements-in-subset](https://github.com/Jyndr/DSA/tree/master/3020-find-the-maximum-number-of-elements-in-subset) |
+| [3499-maximize-active-section-with-trade-i](https://github.com/Jyndr/DSA/tree/master/3499-maximize-active-section-with-trade-i) |
 ## Greedy
 |  |
 | ------- |
