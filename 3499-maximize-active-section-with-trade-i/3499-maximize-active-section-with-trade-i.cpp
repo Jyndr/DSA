@@ -43,6 +43,6 @@ public:
                 i++;
             }
         }
-        return max(cnt , ans);
+        return max(cnt, ans);
     }
 };
