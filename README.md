@@ -9,6 +9,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [1979-find-greatest-common-divisor-of-array](https://github.com/Jyndr/DSA/tree/master/1979-find-greatest-common-divisor-of-array) |
 | [3312-sorted-gcd-pair-queries](https://github.com/Jyndr/DSA/tree/master/3312-sorted-gcd-pair-queries) |
 | [3336-find-the-number-of-subsequences-with-equal-gcd](https://github.com/Jyndr/DSA/tree/master/3336-find-the-number-of-subsequences-with-equal-gcd) |
+| [3513-number-of-unique-xor-triplets-i](https://github.com/Jyndr/DSA/tree/master/3513-number-of-unique-xor-triplets-i) |
 | [3658-gcd-of-odd-and-even-sums](https://github.com/Jyndr/DSA/tree/master/3658-gcd-of-odd-and-even-sums) |
 | [3700-number-of-zigzag-arrays-ii](https://github.com/Jyndr/DSA/tree/master/3700-number-of-zigzag-arrays-ii) |
 | [3704-count-no-zero-pairs-that-sum-to-n](https://github.com/Jyndr/DSA/tree/master/3704-count-no-zero-pairs-that-sum-to-n) |
@@ -86,6 +87,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [3286-find-a-safe-walk-through-a-grid](https://github.com/Jyndr/DSA/tree/master/3286-find-a-safe-walk-through-a-grid) |
 | [3312-sorted-gcd-pair-queries](https://github.com/Jyndr/DSA/tree/master/3312-sorted-gcd-pair-queries) |
 | [3336-find-the-number-of-subsequences-with-equal-gcd](https://github.com/Jyndr/DSA/tree/master/3336-find-the-number-of-subsequences-with-equal-gcd) |
+| [3513-number-of-unique-xor-triplets-i](https://github.com/Jyndr/DSA/tree/master/3513-number-of-unique-xor-triplets-i) |
 | [3532-path-existence-queries-in-a-graph-i](https://github.com/Jyndr/DSA/tree/master/3532-path-existence-queries-in-a-graph-i) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/Jyndr/DSA/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 | [3620-network-recovery-pathways](https://github.com/Jyndr/DSA/tree/master/3620-network-recovery-pathways) |
@@ -215,6 +217,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 ## Bit Manipulation
 |  |
 | ------- |
+| [3513-number-of-unique-xor-triplets-i](https://github.com/Jyndr/DSA/tree/master/3513-number-of-unique-xor-triplets-i) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/Jyndr/DSA/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Number Theory
 |  |
