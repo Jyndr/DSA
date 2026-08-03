@@ -6,6 +6,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 ## Math
 |  |
 | ------- |
+| [0486-predict-the-winner](https://github.com/Jyndr/DSA/tree/master/0486-predict-the-winner) |
 | [0628-maximum-product-of-three-numbers](https://github.com/Jyndr/DSA/tree/master/0628-maximum-product-of-three-numbers) |
 | [0877-stone-game](https://github.com/Jyndr/DSA/tree/master/0877-stone-game) |
 | [1406-stone-game-iii](https://github.com/Jyndr/DSA/tree/master/1406-stone-game-iii) |
@@ -26,6 +27,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 ## Dynamic Programming
 |  |
 | ------- |
+| [0486-predict-the-winner](https://github.com/Jyndr/DSA/tree/master/0486-predict-the-winner) |
 | [0678-valid-parenthesis-string](https://github.com/Jyndr/DSA/tree/master/0678-valid-parenthesis-string) |
 | [0877-stone-game](https://github.com/Jyndr/DSA/tree/master/0877-stone-game) |
 | [1301-number-of-paths-with-max-score](https://github.com/Jyndr/DSA/tree/master/1301-number-of-paths-with-max-score) |
@@ -90,6 +92,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 ## Array
 |  |
 | ------- |
+| [0486-predict-the-winner](https://github.com/Jyndr/DSA/tree/master/0486-predict-the-winner) |
 | [0628-maximum-product-of-three-numbers](https://github.com/Jyndr/DSA/tree/master/0628-maximum-product-of-three-numbers) |
 | [0877-stone-game](https://github.com/Jyndr/DSA/tree/master/0877-stone-game) |
 | [0974-subarray-sums-divisible-by-k](https://github.com/Jyndr/DSA/tree/master/0974-subarray-sums-divisible-by-k) |
@@ -283,14 +286,21 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 ## Game Theory
 |  |
 | ------- |
+| [0486-predict-the-winner](https://github.com/Jyndr/DSA/tree/master/0486-predict-the-winner) |
 | [0877-stone-game](https://github.com/Jyndr/DSA/tree/master/0877-stone-game) |
 | [1406-stone-game-iii](https://github.com/Jyndr/DSA/tree/master/1406-stone-game-iii) |
 ## Minimax
 |  |
 | ------- |
+| [0486-predict-the-winner](https://github.com/Jyndr/DSA/tree/master/0486-predict-the-winner) |
 | [1406-stone-game-iii](https://github.com/Jyndr/DSA/tree/master/1406-stone-game-iii) |
 ## Zero-Sum Game
 |  |
 | ------- |
+| [0486-predict-the-winner](https://github.com/Jyndr/DSA/tree/master/0486-predict-the-winner) |
 | [1406-stone-game-iii](https://github.com/Jyndr/DSA/tree/master/1406-stone-game-iii) |
+## Recursion
+|  |
+| ------- |
+| [0486-predict-the-winner](https://github.com/Jyndr/DSA/tree/master/0486-predict-the-winner) |
 <!---LeetCode Topics End-->
