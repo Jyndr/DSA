@@ -9,6 +9,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [0486-predict-the-winner](https://github.com/Jyndr/DSA/tree/master/0486-predict-the-winner) |
 | [0628-maximum-product-of-three-numbers](https://github.com/Jyndr/DSA/tree/master/0628-maximum-product-of-three-numbers) |
 | [0877-stone-game](https://github.com/Jyndr/DSA/tree/master/0877-stone-game) |
+| [1140-stone-game-ii](https://github.com/Jyndr/DSA/tree/master/1140-stone-game-ii) |
 | [1406-stone-game-iii](https://github.com/Jyndr/DSA/tree/master/1406-stone-game-iii) |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/Jyndr/DSA/tree/master/1979-find-greatest-common-divisor-of-array) |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/Jyndr/DSA/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
@@ -32,6 +33,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [0486-predict-the-winner](https://github.com/Jyndr/DSA/tree/master/0486-predict-the-winner) |
 | [0678-valid-parenthesis-string](https://github.com/Jyndr/DSA/tree/master/0678-valid-parenthesis-string) |
 | [0877-stone-game](https://github.com/Jyndr/DSA/tree/master/0877-stone-game) |
+| [1140-stone-game-ii](https://github.com/Jyndr/DSA/tree/master/1140-stone-game-ii) |
 | [1301-number-of-paths-with-max-score](https://github.com/Jyndr/DSA/tree/master/1301-number-of-paths-with-max-score) |
 | [1406-stone-game-iii](https://github.com/Jyndr/DSA/tree/master/1406-stone-game-iii) |
 | [3302-find-the-lexicographically-smallest-valid-sequence](https://github.com/Jyndr/DSA/tree/master/3302-find-the-lexicographically-smallest-valid-sequence) |
@@ -90,6 +92,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 |  |
 | ------- |
 | [0974-subarray-sums-divisible-by-k](https://github.com/Jyndr/DSA/tree/master/0974-subarray-sums-divisible-by-k) |
+| [1140-stone-game-ii](https://github.com/Jyndr/DSA/tree/master/1140-stone-game-ii) |
 | [3312-sorted-gcd-pair-queries](https://github.com/Jyndr/DSA/tree/master/3312-sorted-gcd-pair-queries) |
 | [3699-number-of-zigzag-arrays-i](https://github.com/Jyndr/DSA/tree/master/3699-number-of-zigzag-arrays-i) |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/Jyndr/DSA/tree/master/3737-count-subarrays-with-majority-element-i) |
@@ -102,6 +105,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | [0628-maximum-product-of-three-numbers](https://github.com/Jyndr/DSA/tree/master/0628-maximum-product-of-three-numbers) |
 | [0877-stone-game](https://github.com/Jyndr/DSA/tree/master/0877-stone-game) |
 | [0974-subarray-sums-divisible-by-k](https://github.com/Jyndr/DSA/tree/master/0974-subarray-sums-divisible-by-k) |
+| [1140-stone-game-ii](https://github.com/Jyndr/DSA/tree/master/1140-stone-game-ii) |
 | [1260-shift-2d-grid](https://github.com/Jyndr/DSA/tree/master/1260-shift-2d-grid) |
 | [1288-remove-covered-intervals](https://github.com/Jyndr/DSA/tree/master/1288-remove-covered-intervals) |
 | [1301-number-of-paths-with-max-score](https://github.com/Jyndr/DSA/tree/master/1301-number-of-paths-with-max-score) |
@@ -304,16 +308,19 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 | ------- |
 | [0486-predict-the-winner](https://github.com/Jyndr/DSA/tree/master/0486-predict-the-winner) |
 | [0877-stone-game](https://github.com/Jyndr/DSA/tree/master/0877-stone-game) |
+| [1140-stone-game-ii](https://github.com/Jyndr/DSA/tree/master/1140-stone-game-ii) |
 | [1406-stone-game-iii](https://github.com/Jyndr/DSA/tree/master/1406-stone-game-iii) |
 ## Minimax
 |  |
 | ------- |
 | [0486-predict-the-winner](https://github.com/Jyndr/DSA/tree/master/0486-predict-the-winner) |
+| [1140-stone-game-ii](https://github.com/Jyndr/DSA/tree/master/1140-stone-game-ii) |
 | [1406-stone-game-iii](https://github.com/Jyndr/DSA/tree/master/1406-stone-game-iii) |
 ## Zero-Sum Game
 |  |
 | ------- |
 | [0486-predict-the-winner](https://github.com/Jyndr/DSA/tree/master/0486-predict-the-winner) |
+| [1140-stone-game-ii](https://github.com/Jyndr/DSA/tree/master/1140-stone-game-ii) |
 | [1406-stone-game-iii](https://github.com/Jyndr/DSA/tree/master/1406-stone-game-iii) |
 ## Recursion
 |  |
