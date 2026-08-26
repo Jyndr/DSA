@@ -3,12 +3,7 @@ public:
     string shortestBeautifulSubstring(string s, int k) {
 
         int i = 0, j = 0, n = s.size();
-        string a = "";
-        while (a.size() < n) {
-            a += '1';
-        }
-        int ans = INT_MAX;
-        int cnt1 = 0, cnt0 = 0;
+        int cnt1 = 0, cnt0 = 0, ans = INT_MAX;
 
         while (j < n) {
             if (s[j] == '1')
@@ -35,6 +30,11 @@ public:
 
         if (ans == INT_MAX) { // edge case
             return "";
+        }
+
+        string a = "";
+        while (a.size() < ans) {
+            a += '1';
         }
 
         i = 0;
