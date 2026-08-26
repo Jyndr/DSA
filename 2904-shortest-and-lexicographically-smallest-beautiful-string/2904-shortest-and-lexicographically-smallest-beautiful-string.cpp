@@ -40,8 +40,8 @@ public:
         i = 0;
         while (i + ans <= n) {
             cnt1 = 0;
-            for (int l = i; l < i + ans; l++) {
-                cnt1 += (s[l] == '1');
+            for (int k = i; k < i + ans; k++) {
+                cnt1 += (s[k] == '1');
             }
             if (cnt1 == k) {
                 if (s.substr(i, ans) < a) {
