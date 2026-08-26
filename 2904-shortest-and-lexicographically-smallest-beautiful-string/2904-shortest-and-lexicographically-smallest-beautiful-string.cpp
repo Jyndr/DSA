@@ -4,7 +4,11 @@ public:
 
         int i = 0, j = 0, n = s.size();
         string a = "";
-        int cnt1 = 0, cnt0 = 0, ans = INT_MAX;
+        while (a.size() < n) {
+            a += '1';
+        }
+        int ans = INT_MAX;
+        int cnt1 = 0, cnt0 = 0;
 
         while (j < n) {
             if (s[j] == '1')
@@ -24,10 +28,7 @@ public:
                 i++;
             }
             if (cnt1 == k) {
-                if(j - i + 1 < ans){
-                    ans = j - i + 1;
-                    a = s.substr(i , j - i + 1);
-                }
+                ans = min(ans, j - i + 1);
             }
             j++;
         }
