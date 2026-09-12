@@ -11,7 +11,7 @@ class Solution {
 public:
     Node f(int i, int k, vector<vector<int>>& intervals) {
         if (k <= 0 || i >= intervals.size()) {
-            return *(new Node());
+            return Node();
         }
 
         if (vis[i][k] != 0) {
