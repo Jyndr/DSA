@@ -33,8 +33,8 @@ public:
     }
 
     vector<string> generateParenthesis(int n) {
-        string s = "";
-        f(0, s, n * 2);
+        string s = "(";
+        f(1, s, n * 2);
         return ans;
     }
 };
