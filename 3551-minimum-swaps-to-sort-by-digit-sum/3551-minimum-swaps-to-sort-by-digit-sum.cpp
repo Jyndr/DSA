@@ -1,45 +1,38 @@
 class Solution {
 public:
-    // Calculate the sum of digits recursively
-    int sumofdigits(int n) {
-        if (!n) return 0;
-        return n % 10 + sumofdigits(n / 10);
-    }
-
-    int minSwaps(vector<int>& nums1) {
-        // Create a copy to get the required sorted order
-        vector<int> nums2 = nums1;
-
-        // Sort by digit sum, then by numeric value
-        sort(nums2.begin(), nums2.end(), [this](int a, int b) {
-            int x = sumofdigits(a);
-            int y = sumofdigits(b);
-
-            if (x == y) return a < b;
-            return x < y;
-        });
-
-        // Store each number's target index
-        unordered_map<int, int> mp;
-        for (int i = 0; i < nums2.size(); i++) {
-            mp[nums2[i]] = i;
+    int minSwaps(vector<int>& nums) {
+        vector<pair<int, int>> v1, v2;
+        for (int i = 0; i < nums.size(); i++) {
+            int sum = 0;
+            int num = nums[i];
+            while (num > 0) {
+                sum += num % 10;
+                num /= 10;
+            }
+            v1.push_back({sum, nums[i]});
+            v2.push_back({sum, nums[i]});
         }
 
-        int ans = 0;
-        int i = 0;
+        sort(v2.begin(), v2.end());
 
-        // Place each number at its correct index
-        while (i < nums1.size()) {
-            if (mp[nums1[i]] == i) {
-                // Number is already at its target index
-                i++;
+        map<pair<int, int>, int> mpp;
+        for (int i = 0; i < v2.size(); i++) {
+            mpp[v2[i]] = i;
+        }
+
+        int swaps = 0;
+        int i = 0;
+        while(i < nums.size()) {
+            int curr = i;
+            int to_go = mpp[v1[i]];
+            if (curr != to_go) {
+                swaps++;
+                swap(v1[curr], v1[to_go]);
             } else {
-                // Swap the number with the element at its target index
-                ans++;
-                swap(nums1[mp[nums1[i]]], nums1[i]);
+                i++;
             }
         }
 
-        return ans;
+        return swaps;
     }
 };
