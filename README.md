@@ -82,6 +82,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 ## Hash Table
 |  |
 | ------- |
+| [0133-clone-graph](https://github.com/Jyndr/DSA/tree/master/0133-clone-graph) |
 | [0409-longest-palindrome](https://github.com/Jyndr/DSA/tree/master/0409-longest-palindrome) |
 | [0974-subarray-sums-divisible-by-k](https://github.com/Jyndr/DSA/tree/master/0974-subarray-sums-divisible-by-k) |
 | [1096-brace-expansion-ii](https://github.com/Jyndr/DSA/tree/master/1096-brace-expansion-ii) |
@@ -378,6 +379,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 ## Breadth-First Search
 |  |
 | ------- |
+| [0133-clone-graph](https://github.com/Jyndr/DSA/tree/master/0133-clone-graph) |
 | [0301-remove-invalid-parentheses](https://github.com/Jyndr/DSA/tree/master/0301-remove-invalid-parentheses) |
 | [1096-brace-expansion-ii](https://github.com/Jyndr/DSA/tree/master/1096-brace-expansion-ii) |
 | [1254-number-of-closed-islands](https://github.com/Jyndr/DSA/tree/master/1254-number-of-closed-islands) |
@@ -427,6 +429,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 ## Graph Theory
 |  |
 | ------- |
+| [0133-clone-graph](https://github.com/Jyndr/DSA/tree/master/0133-clone-graph) |
 | [2492-minimum-score-of-a-path-between-two-cities](https://github.com/Jyndr/DSA/tree/master/2492-minimum-score-of-a-path-between-two-cities) |
 | [2685-count-the-number-of-complete-components](https://github.com/Jyndr/DSA/tree/master/2685-count-the-number-of-complete-components) |
 | [3286-find-a-safe-walk-through-a-grid](https://github.com/Jyndr/DSA/tree/master/3286-find-a-safe-walk-through-a-grid) |
@@ -450,6 +453,7 @@ Daily LeetCode solutions | DSA practice | Medium to Advanced problems
 ## Depth-First Search
 |  |
 | ------- |
+| [0133-clone-graph](https://github.com/Jyndr/DSA/tree/master/0133-clone-graph) |
 | [1254-number-of-closed-islands](https://github.com/Jyndr/DSA/tree/master/1254-number-of-closed-islands) |
 | [2265-count-nodes-equal-to-average-of-subtree](https://github.com/Jyndr/DSA/tree/master/2265-count-nodes-equal-to-average-of-subtree) |
 | [2492-minimum-score-of-a-path-between-two-cities](https://github.com/Jyndr/DSA/tree/master/2492-minimum-score-of-a-path-between-two-cities) |
